@@ -17,4 +17,4 @@ jobs:
           git status
           git add .
           git commit -m "generated"
-          git push
+          git push origin HEAD:$GITHUB_HEAD_REF
