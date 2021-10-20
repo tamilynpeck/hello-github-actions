@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
         with:
-          ref: ${{ github.head_ref }}
+          ref: $GITHUB_HEAD_REF
 
       - run: |
           date > generated.txt
