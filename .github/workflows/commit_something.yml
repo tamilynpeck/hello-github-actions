@@ -8,8 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
         with:
-          fetch-depth: 2
-      - run: git checkout HEAD^
+          fetch-depth: 0
       - run: |
           date > generated.txt
           git config user.name github-actions
