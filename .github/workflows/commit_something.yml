@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
         with:
-          ref: $GITHUB_HEAD_REF
+          ref: ${{ github.head_ref }}
 
       - run: |
           date > generated.txt
@@ -17,4 +17,4 @@ jobs:
           git status
           git add .
           git commit -m "generated"
-          git push origin $GITHUB_HEAD_REF
+          git push
